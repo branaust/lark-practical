@@ -7,7 +7,9 @@ const ChatBubble = ({ type, text }) => {
     <Wrapper type={type}>
       {type === "received" && <Icon source={ReceivedIcon} />}
       <ChatBubbleContainer type={type}>
-        <StyledText type={type}>{text}</StyledText>
+        <StyledText type={type} selectable={true}>
+          {text}
+        </StyledText>
       </ChatBubbleContainer>
     </Wrapper>
   );

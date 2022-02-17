@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 
-const Button = ({ text }) => {
+const Button = ({ text, handlePress }) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={handlePress}>
       <ChatBubbleContainer>
         <StyledText>{text}</StyledText>
       </ChatBubbleContainer>
@@ -12,11 +12,10 @@ const Button = ({ text }) => {
   );
 };
 
-
 const ChatBubbleContainer = styled.View`
   padding: 15px;
   margin: 4px;
-  background-color:#41d100;
+  background-color: #41d100;
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
